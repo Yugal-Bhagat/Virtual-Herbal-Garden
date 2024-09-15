@@ -12,5 +12,16 @@ setInterval(() => {
     countInx = (countInx + 1) % imgArr.length
 
 }, 4000)
-img.style.width = '100%'
-img.style.height = '765px'
+// img.style.width = '100%'
+// img.style.height = 'calc(100vh - 64px)'
+
+let bar = document.querySelector('#menu-bar')
+let nav =document.querySelector('nav')
+bar.addEventListener('click',()=>{
+if (bar.classList.contains('fa-bars')) {
+    bar.className = "fa-solid fa-xmark";
+} else {
+    bar.className = "fa-solid fa-bars";
+}
+nav.classList.toggle('showData')
+})

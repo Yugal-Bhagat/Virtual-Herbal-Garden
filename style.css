@@ -41,7 +41,7 @@ nav {
 
 nav li {
     list-style: none;
-    margin-inline: 5px;
+    margin: 5px;
 }
 
 nav a {
@@ -60,6 +60,15 @@ nav a:hover {
 .nav-left,
 .nav-right {
     display: flex;
+}
+
+.hero-section .image-container {
+    height: calc(100vh - 64px);
+}
+
+.hero-section .image-container img {
+    height: 100%;
+    width: 100%;
 }
 
 .card-section {
@@ -166,7 +175,6 @@ footer {
 
 .about-VHG {
     width: 300px;
-    padding-right: 20px;
 }
 
 .foot-container h2 {
@@ -182,7 +190,10 @@ footer {
     line-height: 1.8;
 }
 
-.about-VHG, .use-Line, .contact-VHG, .follow-VHG {
+.about-VHG,
+.use-Line,
+.contact-VHG,
+.follow-VHG {
     margin: 20px;
 }
 
@@ -240,6 +251,21 @@ footer {
     text-align: center;
 }
 
+.menu {
+    display: none;
+    position: absolute;
+    right: 10px;
+    padding: 20px 10px 10px 10px;
+
+}
+
+.menu i {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
 @media (max-width:1100px) {
     .logo {
         height: 25px;
@@ -273,4 +299,126 @@ footer {
     .follow-VHG {
         margin: 0;
     }
+}
+
+@media (max-width:900px) {
+    .follow-VHG i {
+        font-size: 14px;
+    }
+
+    .follow-VHG a {
+        padding: 4px;
+        margin-right: 5px;
+    }
+
+    .foot-container h2 {
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    .foot-container p,
+    .foot-container li {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .about-VHG {
+        width: 220px;
+    }
+
+}
+
+@media (max-width:730px) {
+
+    .nav-left,
+    .nav-right {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        cursor: pointer;
+        top: 0;
+        right: 10px;
+    }
+
+    .showData {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 100%;
+        background-color: #54615b7f;
+        padding-top: 25px;
+    }
+
+    .foot-container {
+        padding: 0 8px;
+    }
+
+    .showData li {
+        margin: 10px;
+    }
+
+    .showData {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .showData .nav-left,
+    .showData .nav-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        margin-inline: 0;
+        max-width: 250px;
+    }
+
+    .card a,
+    .card p,
+    .card h2 {
+        font-size: 14px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    }
+
+    .follow-VHG i {
+        font-size: 8px;
+    }
+
+    .follow-VHG a {
+        padding: 2px;
+        margin-right: 3px;
+    }
+
+    .foot-container h2 {
+        font-size: 8px;
+        margin-bottom: 8px;
+    }
+
+    .foot-container p,
+    .foot-container li {
+        font-size: 6px;
+        line-height: 1.6;
+    }
+
+    .about-VHG {
+        width: 120px;
+    }
+
+    .foot-bottom p {
+        font-size: 8px;
+    }
+
 }
